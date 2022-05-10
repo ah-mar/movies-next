@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -23,15 +24,19 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="/top-movies" className={styles.card}>
-            <h2>All Time &rarr;</h2>
-            <p>Find the highest rated movies of all time</p>
-          </a>
+          <Link href="/top-movies">
+            <a className={styles.card}>
+              <h2>All Time &rarr;</h2>
+              <p>Find the highest rated movies of all time</p>
+            </a>
+          </Link>
 
-          <a href="/top-movies-week" className={styles.card}>
-            <h2>Popular Now &rarr;</h2>
-            <p>Find the most popular movies this week</p>
-          </a>
+          <Link href="/top-movies-week">
+            <a className={styles.card}>
+              <h2>Popular Now &rarr;</h2>
+              <p>Find the most popular movies this week</p>
+            </a>
+          </Link>
         </div>
       </main>
 
