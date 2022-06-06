@@ -36,8 +36,9 @@ export default function Movies({ data }) {
 }
 
 export async function getServerSideProps() {
+  const api = process.env.API_KEY;
   const res = await fetch(
-    "https://api.themoviedb.org/3/movie/popular?api_key=c4ff031e09872cecb3464d0d28c1ff43&language=en-US&page=1"
+    `https://api.themoviedb.org/3/movie/popular?api_key=${api}&language=en-US&page=1`
   );
   const data = await res.json();
 

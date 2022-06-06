@@ -24,7 +24,6 @@ export default function Movies({ data }) {
     );
   });
 
-  console.log(data);
   return (
     <>
       <main className={styles.main}>
@@ -40,8 +39,9 @@ export default function Movies({ data }) {
 }
 
 export async function getStaticProps() {
+  const api = process.env.API_KEY
   const res = await fetch(
-    "https://api.themoviedb.org/3/movie/top_rated?api_key=c4ff031e09872cecb3464d0d28c1ff43&language=en-US&page=1"
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=${api}&language=en-US&page=1`
   );
   const data = await res.json();
 
