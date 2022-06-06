@@ -1,3 +1,7 @@
+This is a Next JS project example. The project used movies DB as a data source.
+This site used both Statically Site Generation and Server Side Rendering. The top movies of the week uses Server side generated page every time a request is made. The top movies of all time uses Static site generation for both the main page and for the dynamically generated pages for the each movies on the list.
+The project source is hosted on Github and the project is hosted on Vercel.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
