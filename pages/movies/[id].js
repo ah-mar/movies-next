@@ -1,5 +1,4 @@
-import styles from "../../styles/Details.module.css"
-
+import styles from "../../styles/Details.module.css";
 
 export default function Post({ data }) {
   console.log(data);
@@ -12,8 +11,10 @@ export default function Post({ data }) {
         <p className={styles.releaseDate}>Released on {data.release_date}</p>
 
         <p>
-          The production companies are{" "} <em>{data.production_companies.map((comapany) => comapany.name + ", ")}</em>
-          
+          The production companies are{" "}
+          <em>
+            {data.production_companies.map((comapany) => comapany.name + ", ")}
+          </em>
         </p>
         <p>Budget: {data.budget}</p>
         <p>Revenue: {data.revenue}</p>
@@ -48,7 +49,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const api_key = "c4ff031e09872cecb3464d0d28c1ff43";
+  const api_key = process.env.API_KEY;
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${params.id}?api_key=${api_key}&language=en-US`
   );
@@ -60,8 +61,6 @@ export async function getStaticProps({ params }) {
     },
   };
 }
-
-
 
 /*
 adult: false

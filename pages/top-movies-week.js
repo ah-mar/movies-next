@@ -20,7 +20,6 @@ export default function Movies({ data }) {
     );
   });
 
-  console.log(data);
   return (
     <>
       <main className={styles.main}>

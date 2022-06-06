@@ -39,7 +39,7 @@ export default function Movies({ data }) {
 }
 
 export async function getStaticProps() {
-  const api = process.env.API_KEY
+  const api = process.env.API_KEY;
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/top_rated?api_key=${api}&language=en-US&page=1`
   );
